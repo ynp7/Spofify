@@ -15,25 +15,24 @@ router.get("/list", (req, res) => {
 
 router.get("/search", (req, res) => {
 	var query = req.query.query;
-	if (query) {
-		songModel
-			.find({
-				$or: [
-					{
-						name: { $regex: query, $options: "i" }
-					},
-					{
-						artists: { $regex: query, $options: "i" }
-					}
-				]
-			})
-			.then(songs => {
-				return res.json({ songs: songs });
-			})
-			.catch(err => {
-				return res.json({ message: "Cannot query db" });
-			});
-	}
+	// if query is empty send all data
+	songModel
+		.find({
+			$or: [
+				{
+					name: { $regex: query, $options: "i" }
+				},
+				{
+					artists: { $regex: query, $options: "i" }
+				}
+			]
+		})
+		.then(songs => {
+			return res.json({ songs: songs });
+		})
+		.catch(err => {
+			return res.json({ message: "Cannot query db" });
+		});
 });
 
 module.exports = router;
