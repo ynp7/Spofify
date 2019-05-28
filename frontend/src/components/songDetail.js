@@ -11,16 +11,26 @@ class SongDetail extends Component {
 	}
 	componentDidMount() {
 		axios
-			.get('/songs/list')
+			.get('/songs/detail', { params: { id: this.props.id } })
 			.then(response => {
-				this.setState({ song: response.data.songs });
+				this.setState({ song: response.data.song[0] });
 			})
 			.catch(err => {
 				console.log(err);
 			});
 	}
 	render() {
-		return <div>Details of the song here</div>;
+		return (
+			<div>
+				<div>Details of the song here</div>
+				<div>Name {this.state.song.name}</div>
+				<div>Artists {this.state.song.artists}</div>
+				<div>Duration {this.state.song.duration_ms}</div>
+				<div>Rank {this.state.song.rank}</div>
+				<div>Tempo {this.state.song.tempo}</div>
+				<div>Energy {this.state.song.energy}</div>
+			</div>
+		);
 	}
 }
 
