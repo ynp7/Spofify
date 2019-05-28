@@ -3,7 +3,7 @@ import '../styles/components/header.css';
 
 class Header extends Component {
 	render() {
-		return <div>Search bar and heading here</div>;
+		return <div>Search</div>;
 	}
 }
 

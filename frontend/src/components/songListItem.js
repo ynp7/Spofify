@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { millisToMinutesAndSeconds } from '../utils';
 
 class SongListItem extends Component {
 	render() {
@@ -6,7 +7,7 @@ class SongListItem extends Component {
 			<tr>
 				<td>{this.props.song.name}</td>
 				<td>{this.props.song.artists}</td>
-				<td>{this.props.song.duration_ms}</td>
+				<td>{millisToMinutesAndSeconds(this.props.song.duration_ms)}</td>
 			</tr>
 		);
 	}
