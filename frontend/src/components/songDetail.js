@@ -11,7 +11,7 @@ class SongDetail extends Component {
 	}
 	componentDidMount() {
 		axios
-			.get('/songs/detail', { params: { id: this.props.id } })
+			.get('/songs/detail', { params: { id: this.props.match.params.id } })
 			.then(response => {
 				this.setState({ song: response.data.song[0] });
 			})

@@ -10,7 +10,7 @@ class ListContainer extends Component {
 			<BrowserRouter>
 				<Route path="/" component={Header} />
 				<Route path="/" exact component={SongList} />
-				<Route path="/detail/" component={SongDetail} />
+				<Route path="/detail/:id" component={SongDetail} />
 			</BrowserRouter>
 		);
 	}
