@@ -14,12 +14,12 @@ router.get('/list', (req, res) => {
 });
 
 router.get('/detail', (req, res) => {
-	const id = req.query.id;
-	if (!id) {
+	const rank = req.query.rank;
+	if (!rank) {
 		return res.json({ error: 'Data insufficient' });
 	}
 	songModel
-		.find({ _id: id })
+		.find({ rank: rank })
 		.then(song => {
 			res.json({ song: song });
 		})
