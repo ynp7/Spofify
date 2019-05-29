@@ -1,0 +1,31 @@
+.title{
+	font-weight: bold;
+	font-size: 2.5rem;
+	padding: 20px;
+	padding-top: 40px;
+}
+
+.searchBox{
+	margin: 10px;
+	border-radius: 20px;
+}
+
+.searchBox::placeholder{
+	color: black;
+}
+
+.songTable{
+	margin: 20px 60px;
+	table-layout: fixed;
+}
+
+.songTable th{
+	text-align: left;
+	font-size: 0.85rem;
+	font-weight: normal;
+	color: #898e92d9;
+}
+
+.songTable tr td{
+	border-bottom: 0.4px solid #414345d9;
+}

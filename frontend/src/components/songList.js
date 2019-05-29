@@ -42,18 +42,20 @@ class SongList extends Component {
 					<>
 						<div>
 							<input
+								className="searchBox"
 								type="text"
+								placeholder="Search"
 								value={this.state.value}
 								onChange={this.onChangeHandler}
 							/>
 						</div>
-						<table>
-							<caption>List of songs here</caption>
+						<div className="title">List of songs here</div>
+						<table className="songTable">
 							<thead>
 								<tr>
-									<th scope="col">Name</th>
-									<th scope="col">Artists</th>
-									<th scope="col">Duration</th>
+									<th scope="col">TITLE</th>
+									<th scope="col">ARTIST</th>
+									<th scope="col">DURATION</th>
 								</tr>
 							</thead>
 							<tbody>
