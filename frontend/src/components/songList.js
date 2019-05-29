@@ -49,7 +49,7 @@ class SongList extends Component {
 								onChange={this.onChangeHandler}
 							/>
 						</div>
-						<div className="title">List of songs here</div>
+						<div className="title">Top 50 Songs</div>
 						<table className="songTable">
 							<thead>
 								<tr>

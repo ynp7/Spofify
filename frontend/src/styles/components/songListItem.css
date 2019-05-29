@@ -1,0 +1,12 @@
+.tableRow td {
+	padding: 10px;
+	border-bottom: 0.4px solid #2c2e2fd9;
+}
+
+.tableRow:hover{
+	background: #2c2e2fd9;
+}
+
+.duration{
+	color: #a9abadd9;
+}

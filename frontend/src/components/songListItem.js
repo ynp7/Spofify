@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { millisToMinutesAndSeconds } from '../utils';
 import { withRouter } from 'react-router-dom';
+import '../styles/components/songListItem.css';
 
 class SongListItem extends Component {
 	constructor(props) {
@@ -18,10 +19,15 @@ class SongListItem extends Component {
 
 	render() {
 		return (
-			<tr onClick={() => this.onClickHandler(this.props.song.rank)}>
+			<tr
+				className="tableRow"
+				onClick={() => this.onClickHandler(this.props.song.rank)}
+			>
 				<td>{this.props.song.name}</td>
 				<td>{this.props.song.artists}</td>
-				<td>{millisToMinutesAndSeconds(this.props.song.duration_ms)}</td>
+				<td className="duration">
+					{millisToMinutesAndSeconds(this.props.song.duration_ms)}
+				</td>
 			</tr>
 		);
 	}

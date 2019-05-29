@@ -1,13 +1,13 @@
 .title{
 	font-weight: bold;
 	font-size: 2.5rem;
-	padding: 20px;
-	padding-top: 40px;
+	padding: 40px;
 }
 
 .searchBox{
-	margin: 10px;
+	margin: 10px 60px;
 	border-radius: 20px;
+	height: 20px;
 }
 
 .searchBox::placeholder{
@@ -17,15 +17,18 @@
 .songTable{
 	margin: 20px 60px;
 	table-layout: fixed;
+	border-collapse: collapse;
+	width: 100%;
 }
 
 .songTable th{
 	text-align: left;
 	font-size: 0.85rem;
 	font-weight: normal;
-	color: #898e92d9;
+	color: #a9abadd9;
+	padding: 10px;
 }
 
-.songTable tr td{
-	border-bottom: 0.4px solid #414345d9;
+.songTable tr th {
+	border-bottom: 0.4px solid #2c2e2fd9;
 }
