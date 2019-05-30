@@ -50,20 +50,22 @@ class SongList extends Component {
 							/>
 						</div>
 						<div className="title">Top 50 Songs</div>
-						<table className="songTable">
-							<thead>
-								<tr>
-									<th scope="col">TITLE</th>
-									<th scope="col">ARTIST</th>
-									<th scope="col">DURATION</th>
-								</tr>
-							</thead>
-							<tbody>
-								{this.state.songs.map(song => (
-									<SongListItem key={song._id} song={song} />
-								))}
-							</tbody>
-						</table>
+						<div className="table-wrapper">
+							<table className="songTable">
+								<thead>
+									<tr>
+										<th scope="col">TITLE</th>
+										<th scope="col">ARTIST</th>
+										<th scope="col">DURATION</th>
+									</tr>
+								</thead>
+								<tbody>
+									{this.state.songs.map(song => (
+										<SongListItem key={song._id} song={song} />
+									))}
+								</tbody>
+							</table>
+						</div>
 					</>
 				) : (
 					<Error />

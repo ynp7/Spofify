@@ -15,10 +15,13 @@
 }
 
 .songTable{
-	margin: 20px 60px;
 	table-layout: fixed;
 	border-collapse: collapse;
 	width: 100%;
+}
+
+.table-wrapper{
+	margin: 20px 60px;
 }
 
 .songTable th{
