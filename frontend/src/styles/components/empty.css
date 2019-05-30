@@ -1,0 +1,20 @@
+.Empty{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.Empty img{
+	color: white;
+	margin: 30px;
+	max-width: 300px;
+}
+
+.empty-text{
+	background:#1c234c;
+	color: white;
+	border-radius: 30px;
+	padding: 20px 65px;
+}
