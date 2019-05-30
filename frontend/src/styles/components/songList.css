@@ -5,23 +5,44 @@
 }
 
 .searchBox{
-	margin: 10px 60px;
-	border-radius: 20px;
-	height: 20px;
+	margin: 10px 55px;
 }
 
-.searchBox::placeholder{
-	color: black;
+.searchIcon{
+	width: 14px;
+	position: relative;
+	top: 2px;
+	left: 20px;
+}
+
+.searchInput{
+	padding-top: 0px;
+	padding-left: 25px;
+	border-radius: 20px;
+	height: 28px;
+	width: 200px;
+	border-width: 0px;
+	font-size: 0.8rem;
+}
+
+.searchInput::placeholder{
+	color:black;
+	font-weight: 400;
+	font-size: 0.8rem;
+}
+
+.searchInput:focus{
+ outline: none;
+}
+
+.table-wrapper{
+	margin: 20px 60px;
 }
 
 .songTable{
 	table-layout: fixed;
 	border-collapse: collapse;
 	width: 100%;
-}
-
-.table-wrapper{
-	margin: 20px 60px;
 }
 
 .songTable th{

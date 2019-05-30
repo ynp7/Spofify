@@ -3,6 +3,7 @@ import axios from '../config';
 import '../styles/components/songList.css';
 import SongListItem from './songListItem';
 import Error from './error';
+import searchIcon from '../assets/search.png';
 
 class SongList extends Component {
 	constructor(props) {
@@ -40,10 +41,11 @@ class SongList extends Component {
 			<div>
 				{this.state.error === '' ? (
 					<>
-						<div>
+						<div className="searchBox">
+							<img className="searchIcon" alt="search icon" src={searchIcon} />
 							<input
-								className="searchBox"
-								type="text"
+								className="searchInput"
+								type="input"
 								placeholder="Search"
 								value={this.state.value}
 								onChange={this.onChangeHandler}
