@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Error(props) {
+function Errors(props) {
 	return (
 		<div className="Error">
 			<div>Something went wrong</div>
@@ -8,4 +8,4 @@ function Error(props) {
 	);
 }
 
-export default Error;
+export default Errors;

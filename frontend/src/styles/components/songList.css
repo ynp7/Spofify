@@ -12,33 +12,6 @@
 	margin: 10px 55px;
 }
 
-.searchIcon{
-	width: 14px;
-	position: relative;
-	top: 2px;
-	left: 20px;
-}
-
-.searchInput{
-	padding-top: 0px;
-	padding-left: 25px;
-	border-radius: 20px;
-	height: 28px;
-	width: 200px;
-	border-width: 0px;
-	font-size: 0.8rem;
-}
-
-.searchInput::placeholder{
-	color:black;
-	font-weight: 400;
-	font-size: 0.8rem;
-}
-
-.searchInput:focus{
- outline: none;
-}
-
 .table-wrapper{
 	margin: 20px 60px;
 }
@@ -59,8 +32,4 @@
 
 .songTable tr th {
 	border-bottom: 0.4px solid #2c2e2fd9;
-}
-
-.empty {
-	margin: auto;
 }
