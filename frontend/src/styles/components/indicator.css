@@ -1,9 +1,9 @@
-.Empty{
+.Indicator{
 	height: 100%;
 	position: relative;
 }
 
-.empty-img {
+.indicator-img {
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -15,7 +15,7 @@
 	
 }
 
-.empty-text{
+.indicator-text{
 	font-weight: bold;
 	font-size: 2.5rem;
 	position: absolute;

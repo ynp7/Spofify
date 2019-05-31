@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/components/songDetail.css';
-import Errors from './errors';
+import Indicator from './indicator';
 import Loading from './loading';
 
 function SongDetail({ error, loading, song }) {
 	if (error !== '') {
-		return <Errors />;
+		return <Indicator text="Oops, something went wrong" />;
 	} else if (loading === true) {
 		return <Loading />;
 	} else {
