@@ -1,9 +1,8 @@
 import React from 'react';
-import '../styles/components/songList.css';
-import SongListItem from './songListItem';
+import '../styles/components/songTable.css';
+import SongTableItem from './songTableItem';
 
-function songList(props) {
-	console.log(props);
+function SongTable(props) {
 	return (
 		<>
 			<div className="title">Top 50 Songs</div>
@@ -18,7 +17,7 @@ function songList(props) {
 					</thead>
 					<tbody>
 						{props.songs.map(song => (
-							<SongListItem key={song._id} song={song} />
+							<SongTableItem key={song._id} song={song} />
 						))}
 					</tbody>
 				</table>
@@ -27,4 +26,4 @@ function songList(props) {
 	);
 }
 
-export default songList;
+export default SongTable;

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import ListContainer from './container/listContainer';
+import RouterContainer from './container/RouterContainer';
 
 class App extends Component {
 	render() {
-		return <ListContainer />;
+		return <RouterContainer />;
 	}
 }
 
