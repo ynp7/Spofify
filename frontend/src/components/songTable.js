@@ -4,7 +4,7 @@ import SongTableItem from './songTableItem';
 
 function SongTable(props) {
 	return (
-		<>
+		<div className="songTableWrapper">
 			<div className="title">Top 50 Songs</div>
 			<div className="table-wrapper">
 				<table className="songTable">
@@ -22,7 +22,7 @@ function SongTable(props) {
 					</tbody>
 				</table>
 			</div>
-		</>
+		</div>
 	);
 }
 

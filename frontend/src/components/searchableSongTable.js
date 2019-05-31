@@ -3,6 +3,7 @@ import Indicator from './indicator';
 import SongTable from './songTable';
 import Loading from './loading';
 import SearchBar from './searchBar';
+import '../styles/components/searchableSongTable.css';
 
 function SearchableSongTable({
 	error,
@@ -12,26 +13,29 @@ function SearchableSongTable({
 	onChangeHandler
 }) {
 	const songsFound = songs.length;
+	let componentToRender;
 
 	if (error !== '') {
-		return <Indicator text="Oops, something went wrong" />;
+		componentToRender = <Indicator text="Oops, something went wrong" />;
 	} else if (loading) {
-		return <Loading />;
+		componentToRender = <Loading />;
 	} else if (songsFound === 0) {
-		return (
+		componentToRender = (
 			<>
 				<SearchBar value={searchInput} onChangeHandler={onChangeHandler} />
 				<Indicator text="Oops, song not found" />
 			</>
 		);
 	} else {
-		return (
+		componentToRender = (
 			<>
 				<SearchBar value={searchInput} onChangeHandler={onChangeHandler} />
 				<SongTable songs={songs} />
 			</>
 		);
 	}
+
+	return <div className="searchableSongTable">{componentToRender}</div>;
 }
 
 export default SearchableSongTable;
