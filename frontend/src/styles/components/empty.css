@@ -1,20 +1,24 @@
 .Empty{
 	height: 100%;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
+	position: relative;
 }
 
-.Empty img{
-	color: white;
-	margin: 30px;
-	max-width: 300px;
+.empty-img {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background:
+	radial-gradient(closest-side, transparent, #18191a),
+	url(../../assets/empty.png);
+	background-size:cover;
+	opacity: 0.3;
+	
 }
 
 .empty-text{
-	background:#1c234c;
-	color: white;
-	border-radius: 30px;
-	padding: 20px 65px;
+	font-weight: bold;
+	font-size: 2.5rem;
+	position: absolute;
+	top: 40%;
+	left: 35%;
 }
