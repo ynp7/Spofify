@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FetchSong from './fetchSong';
-import SongDetail from '../components/songDetail';
+import FetchSongDetail from './fetchSongDetail';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 class RouterContainer extends Component {
@@ -8,7 +8,7 @@ class RouterContainer extends Component {
 		return (
 			<BrowserRouter>
 				<Route path="/" exact component={FetchSong} />
-				<Route path="/detail/:rank" component={SongDetail} />
+				<Route path="/detail/:rank" component={FetchSongDetail} />
 			</BrowserRouter>
 		);
 	}

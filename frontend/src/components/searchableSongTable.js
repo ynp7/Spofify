@@ -1,11 +1,17 @@
 import React from 'react';
-import Empty from '../components/empty';
-import Errors from '../components/errors';
-import SongTable from '../components/songTable';
-import Loading from '../components/loading';
-import SearchBar from '../components/searchBar';
+import Empty from './empty';
+import Errors from './errors';
+import SongTable from './songTable';
+import Loading from './loading';
+import SearchBar from './searchBar';
 
-function MainPage({ error, songs, loading, searchInput, onChangeHandler }) {
+function SearchableSongTable({
+	error,
+	songs,
+	loading,
+	searchInput,
+	onChangeHandler
+}) {
 	const songsFound = songs.length;
 
 	if (error !== '') {
@@ -29,4 +35,4 @@ function MainPage({ error, songs, loading, searchInput, onChangeHandler }) {
 	}
 }
 
-export default MainPage;
+export default SearchableSongTable;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from '../config';
-import MainPage from './mainPage';
+import SearchableSongTable from '../components/searchableSongTable';
 
 class FetchSong extends Component {
 	constructor(props) {
@@ -43,7 +43,7 @@ class FetchSong extends Component {
 	}
 	render() {
 		return (
-			<MainPage
+			<SearchableSongTable
 				error={this.state.error}
 				songs={this.state.songs}
 				loading={this.state.loading}

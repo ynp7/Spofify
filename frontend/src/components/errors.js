@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Errors(props) {
+function Indicator(props) {
 	return (
-		<div className="Error">
+		<div className="Indicator">
 			<div>Something went wrong</div>
 		</div>
 	);
 }
 
-export default Errors;
+export default Indicator;
