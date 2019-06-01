@@ -1,3 +1,19 @@
-# coda-challenge-2019-feb
+# Spofify
 
-mongoimport -d songs -c songlists --type CSV top_spotify_021e61205.csv --headerline
+A site which enables simple lookup of list of random songs with it's detailed view done with react and node.
+
+Installation:
+
+- Import the uploaded csv into a mongodb collection
+	
+		mongoimport -d songs -c songlists --type CSV top_spotify_021e61205.csv --headerline
+
+- Dive into the backend folder and type,
+
+		npm i
+		npm start
+
+- Dive back to the frontend folder and type,
+
+		npm i
+		npm start
