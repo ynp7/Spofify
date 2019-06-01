@@ -2,6 +2,8 @@ import React from 'react';
 import '../styles/components/songDetail.css';
 import Indicator from './indicator';
 import Loading from './loading';
+import { millisToMinutesAndSeconds } from '../utils';
+import SongStats from './songStats';
 
 function SongDetail({ error, loading, song }) {
 	if (error !== '') {
@@ -10,15 +12,19 @@ function SongDetail({ error, loading, song }) {
 		return <Loading />;
 	} else {
 		return (
-			<>
-				<div>Details of the song here</div>
-				<div>Name {song.name}</div>
-				<div>Artists {song.artists}</div>
-				<div>Duration {song.duration_ms}</div>
-				<div>Rank {song.rank}</div>
-				<div>Tempo {song.tempo}</div>
-				<div>Energy {song.energy}</div>
-			</>
+			<div className="songDetail">
+				<div className="songHeader">
+					<div className="basicInfoHeader">
+						<div>{song.rank}</div>
+						<div>{song.name}</div>
+						<div>{song.artists}</div>
+					</div>
+					<div className="durationDetail">
+						{millisToMinutesAndSeconds(song.duration_ms)}
+					</div>
+				</div>
+				<SongStats song={song} />
+			</div>
 		);
 	}
 }
