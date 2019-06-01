@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/components/songStats.css';
 
 function SongStats({ song }) {
 	const total = [1000, 1, 10, 10, 10, 1, 1, 1, 1, 1, 0.005];

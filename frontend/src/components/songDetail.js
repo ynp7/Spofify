@@ -23,7 +23,7 @@ function SongDetail({ error, loading, song }) {
 						{millisToMinutesAndSeconds(song.duration_ms)}
 					</div>
 				</div>
-				<SongStats song={song} />
+				<SongStats className="songStats" song={song} />
 			</div>
 		);
 	}
