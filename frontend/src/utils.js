@@ -6,4 +6,16 @@ function millisToMinutesAndSeconds(millis) {
 		: minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
 }
 
-export { millisToMinutesAndSeconds };
+function textFormat(text) {
+	return text.split('_').join(' ');
+}
+
+function strLengthFormat(text) {
+	if (text.length > 25) {
+		return `${text.substr(0, 25)} ...`;
+	} else {
+		return text;
+	}
+}
+
+export { millisToMinutesAndSeconds, textFormat, strLengthFormat };

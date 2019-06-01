@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/components/songDetail.css';
 import Indicator from './indicator';
 import Loading from './loading';
-import { millisToMinutesAndSeconds } from '../utils';
+import { millisToMinutesAndSeconds, strLengthFormat } from '../utils';
 import SongStats from './songStats';
 
 function SongDetail({ error, loading, song }) {
@@ -15,7 +15,9 @@ function SongDetail({ error, loading, song }) {
 			<div className="songDetail">
 				<div className="songHeader">
 					<div className="basicInfoHeader">
-						<div className="basicInfoHeader__title">{song.name}</div>
+						<div className="basicInfoHeader__title">
+							{strLengthFormat(song.name)}
+						</div>
 						<div className="basicInfoHeader__artist">{song.artists}</div>
 					</div>
 					<div className="otherInfoHeader">

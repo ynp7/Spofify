@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/components/songStats.css';
+import { textFormat } from '../utils';
 
 function SongStats({ song }) {
 	const total = [0, 0, 0, 1, 1, 11, 20, 10, 1, 1, 1, 1, 1, 200, 0, 10, 0];
@@ -13,7 +14,7 @@ function SongStats({ song }) {
 					return (
 						<div className="statItem">
 							<div className="statItemHeader">
-								<div className="statTitle">{key.split('_').join(' ')}</div>
+								<div className="statTitle">{textFormat(key)}</div>
 								<div className="statValue">{song[key]}</div>
 							</div>
 							<div className="statBar">
