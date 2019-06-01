@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/components/songTable.css';
 import SongTableItem from './songTableItem';
 
-function SongTable(props) {
+function SongTable({ songs }) {
 	return (
 		<div className="songTableWrapper">
 			<div className="title">Top 50 Songs</div>
@@ -16,7 +16,7 @@ function SongTable(props) {
 						</tr>
 					</thead>
 					<tbody>
-						{props.songs.map(song => (
+						{songs.map(song => (
 							<SongTableItem key={song._id} song={song} />
 						))}
 					</tbody>
