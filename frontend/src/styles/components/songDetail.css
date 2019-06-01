@@ -15,6 +15,23 @@
 	margin: 20px 0px;
 }
 
+.basicInfoHeader__title{
+	font-size: 2.5rem;
+	margin: 10px 0px;
+}
+
+.basicInfoHeader__artist{
+	color: #e5f9f9d9;
+}
+
+.rank{
+	margin: 20px 0px;
+}
+
+.durationDetail{
+	color: #9aabb3d9;
+}
+
 .songStats{
 	width: 50%;
 	display: grid;

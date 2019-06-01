@@ -15,12 +15,14 @@ function SongDetail({ error, loading, song }) {
 			<div className="songDetail">
 				<div className="songHeader">
 					<div className="basicInfoHeader">
-						<div>{song.rank}</div>
-						<div>{song.name}</div>
-						<div>{song.artists}</div>
+						<div className="basicInfoHeader__title">{song.name}</div>
+						<div className="basicInfoHeader__artist">{song.artists}</div>
 					</div>
-					<div className="durationDetail">
-						{millisToMinutesAndSeconds(song.duration_ms)}
+					<div className="otherInfoHeader">
+						<div className="rank">{song.rank}</div>
+						<div className="durationDetail">
+							{millisToMinutesAndSeconds(song.duration_ms)}
+						</div>
 					</div>
 				</div>
 				<SongStats className="songStats" song={song} />
