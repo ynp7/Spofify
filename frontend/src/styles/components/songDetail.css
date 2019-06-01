@@ -18,18 +18,26 @@
 .basicInfoHeader__title{
 	font-size: 2.5rem;
 	margin: 10px 0px;
+	padding: 0px 16px;
 }
 
 .basicInfoHeader__artist{
 	color: #e5f9f9d9;
+	padding: 0px 16px;
 }
 
-.rank{
-	margin: 20px 0px;
+.rank {
+	margin: 10px 0px;
 }
 
-.durationDetail{
+.rank__number{
+	padding: 10px;
+	font-size: 2.5rem;
+}
+
+.durationDetail__number{
 	color: #9aabb3d9;
+	padding: 10px;
 }
 
 .songStats{

@@ -4,6 +4,8 @@ import Indicator from './indicator';
 import Loading from './loading';
 import { millisToMinutesAndSeconds, strLengthFormat } from '../utils';
 import SongStats from './songStats';
+import trophy from '../assets/trophy.png';
+import stopwatch from '../assets/stopwatch.png';
 
 function SongDetail({ error, loading, song }) {
 	if (error !== '') {
@@ -21,9 +23,23 @@ function SongDetail({ error, loading, song }) {
 						<div className="basicInfoHeader__artist">{song.artists}</div>
 					</div>
 					<div className="otherInfoHeader">
-						<div className="rank">{song.rank}</div>
+						<div className="rank">
+							<img
+								className="rank__image"
+								alt="trophy indicator"
+								src={trophy}
+							/>
+							<span className="rank__number">{song.rank}</span>
+						</div>
 						<div className="durationDetail">
-							{millisToMinutesAndSeconds(song.duration_ms)}
+							<img
+								className="durationDetail__img"
+								alt="timer icon"
+								src={stopwatch}
+							/>
+							<span className="durationDetail__number">
+								{millisToMinutesAndSeconds(song.duration_ms)}
+							</span>
 						</div>
 					</div>
 				</div>
