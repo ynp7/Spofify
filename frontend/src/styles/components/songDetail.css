@@ -38,7 +38,7 @@
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
 	justify-items: center;
-	grid-gap: 4px;
+	grid-gap: 8px;
 }
 
 .line{

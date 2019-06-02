@@ -2,7 +2,9 @@
 
 A site which enables simple lookup of list of random songs with it's detailed view done with react and node.
 
-Installation:
+## Install: 
+
+Install mongodb and node, if you haven't, then,
 
 - Import the uploaded csv into a mongodb collection
 	
