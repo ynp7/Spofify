@@ -1,12 +1,14 @@
-const express = require("express");
-const db = require("./dbConnection");
+const express = require('express');
+const db = require('./dbConnection');
 const app = express();
-const cors = require("cors");
-global.__root = __dirname + "/";
+const cors = require('cors');
+global.__root = __dirname + '/';
 
 app.use(cors());
 
-var SongController = require(__root + "songController");
-app.use("/api/songs", SongController);
+const port = process.env.PORT || 3001;
 
-app.listen(3000, () => console.log("starting app"));
+var SongController = require(__root + 'songController');
+app.use('/api/songs', SongController);
+
+app.listen(port, () => console.log('starting app'));
