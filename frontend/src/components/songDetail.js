@@ -43,6 +43,7 @@ function SongDetail({ error, loading, song }) {
 						</div>
 					</div>
 				</div>
+				<div className="line" />
 				<SongStats className="songStats" song={song} />
 			</div>
 		);

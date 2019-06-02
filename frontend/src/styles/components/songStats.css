@@ -37,6 +37,15 @@
 	height: 3px;
 	background-color: #298edb;
 	border-radius: 2px;
-	border-right: 3px solid aqua;
+}
 
+.valueStatBar::after{
+	position: absolute;
+    content: '';
+    top: -2px;
+    right: 0px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #298edb;
 }

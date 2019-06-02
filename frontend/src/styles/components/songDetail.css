@@ -12,7 +12,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin: 20px 0px;
+	margin: 30px 0px;
 }
 
 .basicInfoHeader__title{
@@ -38,6 +38,12 @@
 .durationDetail__number{
 	color: #9aabb3d9;
 	padding: 10px;
+}
+
+.line{
+	padding: 0.8px;
+	width: 50%;
+	background-color: #2c2e2fd9;
 }
 
 .songStats{
