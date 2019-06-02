@@ -23,23 +23,16 @@ function SongDetail({ error, loading, song }) {
 						<div className="basicInfoHeader__artist">{song.artists}</div>
 					</div>
 					<div className="otherInfoHeader">
-						<div className="rank">
-							<img
-								className="rank__image"
-								alt="trophy indicator"
-								src={trophy}
-							/>
-							<span className="rank__number">{song.rank}</span>
-						</div>
-						<div className="durationDetail">
-							<img
-								className="durationDetail__img"
-								alt="timer icon"
-								src={stopwatch}
-							/>
-							<span className="durationDetail__number">
-								{millisToMinutesAndSeconds(song.duration_ms)}
-							</span>
+						<img className="rank__image" alt="trophy indicator" src={trophy} />
+						<div className="rank__number">{song.rank}</div>
+
+						<img
+							className="durationDetail__img"
+							alt="timer icon"
+							src={stopwatch}
+						/>
+						<div className="durationDetail__number">
+							{millisToMinutesAndSeconds(song.duration_ms)}
 						</div>
 					</div>
 				</div>
