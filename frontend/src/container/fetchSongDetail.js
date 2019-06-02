@@ -12,21 +12,27 @@ class FetchSongDetail extends Component {
 		};
 	}
 	componentDidMount() {
-		this.setState({ loading: true });
-		axios
-			.get('/songs/detail', { params: { rank: this.props.match.params.rank } })
-			.then(response => {
-				this.setState({
-					song: response.data.song[0],
-					loading: false
+		if (this.props.location.state) {
+			this.setState({ loading: false, song: this.props.location.state.song });
+		} else {
+			this.setState({ loading: true });
+			axios
+				.get('/songs/detail', {
+					params: { rank: this.props.match.params.rank }
+				})
+				.then(response => {
+					this.setState({
+						song: response.data.song[0],
+						loading: false
+					});
+				})
+				.catch(error => {
+					this.setState({
+						error: error.message,
+						loading: false
+					});
 				});
-			})
-			.catch(error => {
-				this.setState({
-					error: error.message,
-					loading: false
-				});
-			});
+		}
 	}
 	render() {
 		return (

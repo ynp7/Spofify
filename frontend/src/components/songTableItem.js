@@ -12,16 +12,19 @@ class SongListItem extends Component {
 		this.onClickHandler = this.onClickHandler.bind(this);
 	}
 
-	onClickHandler(rank) {
-		this.setState({ rank: rank });
-		this.props.history.push(`/detail/${rank}`);
+	onClickHandler(song) {
+		this.setState({ rank: song.rank });
+		this.props.history.push({
+			pathname: `/detail/${song.rank}`,
+			state: { song: song }
+		});
 	}
 
 	render() {
 		return (
 			<tr
 				className="tableRow"
-				onClick={() => this.onClickHandler(this.props.song.rank)}
+				onClick={() => this.onClickHandler(this.props.song)}
 			>
 				<td>{this.props.song.name}</td>
 				<td>{this.props.song.artists}</td>
