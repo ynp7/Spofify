@@ -10,7 +10,7 @@ function SongStats({ song }) {
 		<div className="songStats">
 			{Object.keys(song).map(key => {
 				i++;
-				if (i > 2 && i !== 14 && i !== 16) {
+				if (total[i] !== 0) {
 					return (
 						<div className="statItem">
 							<div className="statItemHeader">
